@@ -25,8 +25,8 @@
       <class name="tests.LoginTest">
         <methods>
           <include name="testLoginExcel"/>
+          <include name="testLogin" invocation-numbers="0 1"/>
           <include name="performLogin" invocation-numbers="0"/>
-          <include name="testLogin"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

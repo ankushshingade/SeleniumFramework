@@ -11,16 +11,8 @@
 		<listener class-name="listeners.TestListeners" />
 	</listeners>
 
-	<test name="TestExampleOneChrome">
+	<test name="TestExampleOneChrome" parallel="methods" thread-count="2">
 		<parameter name="browser" value="chrome"></parameter>
-		<classes>
-			<class name="tests.LoginTest">
-			</class>
-		</classes>
-	</test>
-
-	<test name = "TestExampleOnSafari">
-		<parameter name="browser" value="safari"></parameter>
 		<classes>
 			<class name="tests.LoginTest">
 			</class>

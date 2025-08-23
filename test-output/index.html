@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods, 4 failed,  5 skipped,  3 passed</span>
+                    <span class="method-stats">12 methods, 6 failed,  3 skipped,  3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -108,12 +108,22 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExampleSuite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(admin, admin123)">testLogin(admin, admin123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-ExampleSuite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(user1, pass123)">testLogin(user1, pass123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-ExampleSuite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(admin, admin123)">testLogin(admin, admin123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ExampleSuite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(user1, pass123)">testLogin(user1, pass123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -130,16 +140,6 @@
                       <a href="#" panel-name="suite-ExampleSuite" class="show-methods skipped suite-ExampleSuite"> (show)</a> <!-- show-methods skipped suite-ExampleSuite -->
                     </span>
                     <div class="method-list-content skipped suite-ExampleSuite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-ExampleSuite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(user1, pass123)">testLogin(user1, pass123)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-ExampleSuite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(admin, admin123)">testLogin(admin, admin123)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-ExampleSuite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(Admin@gmail.com, Admin@123)">testLogin(Admin@gmail.com, Admin@123)</a> <!-- method navigator-link -->
@@ -204,38 +204,14 @@
                   <span class="method-name">performLogin</span>
                   <span class="parameters">(Admin@gmail.com,Admin@123)</span>
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;Automation Exercise&quot;. Current title: &quot;Automation Exercise - Signup / Login&quot; (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.safari.SafariDriver
 Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 18.5, platformName: mac, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 24F74, safari:platformVersion: 15.5, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
-Session ID: 16CC5497-8CA7-425D-9AAB-328A47D338DF
+Session ID: A7B47F13-99A0-499E-AD2C-2C0A9A353078
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at tests.LoginTest.performLogin(LoginTest.java:33)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 11 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testLogin(user1, pass123)">
-                  </a> <!-- testLogin(user1, pass123) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(user1,pass123)</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;Automation Exercise&quot;. Current title: &quot;Automation Exercise - Signup / Login&quot; (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: /var/folders/d_/0xtj87tj41b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56351}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56351/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3b04d900f9c4fed123bcd0dde64afdb4
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at tests.LoginTest.testLogin(LoginTest.java:57)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
@@ -252,14 +228,86 @@ Session ID: 3b04d900f9c4fed123bcd0dde64afdb4
                   <span class="method-name">testLogin</span>
                   <span class="parameters">(admin,admin123)</span>
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;Automation Exercise&quot;. Current title: &quot;Automation Exercise - Signup / Login&quot; (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: /var/folders/d_/0xtj87tj41b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56314}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56314/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9e297717b9c5012fcfc23db4704e6441
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: /var/folders/d_/0xtj87tj41b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51289}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51289/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 88b3153183c92d1873180483e59b0b84
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at tests.LoginTest.testLogin(LoginTest.java:57)
+	at tests.LoginTest.testLogin(LoginTest.java:56)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogin(user1, pass123)">
+                  </a> <!-- testLogin(user1, pass123) -->
+                  <span class="method-name">testLogin</span>
+                  <span class="parameters">(user1,pass123)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;Automation Exercise&quot;. Current title: &quot;Automation Exercise - Signup / Login&quot; (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: /var/folders/d_/0xtj87tj41b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51376}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51376/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4565bc601a9d6f3285a3690c81ba48ab
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at tests.LoginTest.testLogin(LoginTest.java:56)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogin(admin, admin123)">
+                  </a> <!-- testLogin(admin, admin123) -->
+                  <span class="method-name">testLogin</span>
+                  <span class="parameters">(admin,admin123)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;Automation Exercise&quot;. Current title: &quot;Automation Exercise - Signup / Login&quot; (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.safari.SafariDriver
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 18.5, platformName: mac, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 24F74, safari:platformVersion: 15.5, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: C5CC7F65-324D-44C5-9CC6-26C369363DD1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at tests.LoginTest.testLogin(LoginTest.java:56)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogin(user1, pass123)">
+                  </a> <!-- testLogin(user1, pass123) -->
+                  <span class="method-name">testLogin</span>
+                  <span class="parameters">(user1,pass123)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;Automation Exercise&quot;. Current title: &quot;Automation Exercise - Signup / Login&quot; (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.safari.SafariDriver
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 18.5, platformName: mac, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 24F74, safari:platformVersion: 15.5, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: 89ECF6BA-0BD1-40BC-85EC-F1F1A2B36ED6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at tests.LoginTest.testLogin(LoginTest.java:56)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
@@ -276,14 +324,14 @@ Session ID: 9e297717b9c5012fcfc23db4704e6441
                   <span class="method-name">testLoginExcel</span>
                   <span class="parameters">({password=Admin@1234, username=Admin@gmail.com})</span>
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be &quot;Automation Exercise&quot;. Current title: &quot;Automation Exercise - Signup / Login&quot; (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: /var/folders/d_/0xtj87tj41b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56404}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:56404/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ff2f5ad879949eb8f55281a50b08bad
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: /var/folders/d_/0xtj87tj41b...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51419}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51419/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e2f2dac89a92218b66f9f9668da41156
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at tests.LoginTest.testLoginExcel(LoginTest.java:91)
+	at tests.LoginTest.testLoginExcel(LoginTest.java:88)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
@@ -303,87 +351,13 @@ Session ID: 6ff2f5ad879949eb8f55281a50b08bad
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin(user1, pass123)">
-                  </a> <!-- testLogin(user1, pass123) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(user1,pass123)</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The automation session ended unexpected while attempting to pair with it. 
-Host info: host: &apos;Sandeshs-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:54:113e:8f74:fbe4%en0&apos;
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
-Driver info: org.openqa.selenium.safari.SafariDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: safari}]}]
-Capabilities {browserName: safari}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:84)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:80)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:57)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:48)
-	at drivers.DriverFactory.createDriver(DriverFactory.java:23)
-	at tests.BaseTest.setup(BaseTest.java:20)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testLogin(admin, admin123)">
-                  </a> <!-- testLogin(admin, admin123) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(admin,admin123)</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The automation session ended unexpected while attempting to pair with it. 
-Host info: host: &apos;Sandeshs-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:54:113e:8f74:fbe4%en0&apos;
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
-Driver info: org.openqa.selenium.safari.SafariDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: safari}]}]
-Capabilities {browserName: safari}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:84)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:80)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:57)
-	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:48)
-	at drivers.DriverFactory.createDriver(DriverFactory.java:23)
-	at tests.BaseTest.setup(BaseTest.java:20)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="testLogin(Admin@gmail.com, Admin@123)">
                   </a> <!-- testLogin(Admin@gmail.com, Admin@123) -->
                   <span class="method-name">testLogin</span>
                   <span class="parameters">(Admin@gmail.com,Admin@123)</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The automation session ended unexpected while attempting to pair with it. 
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The Safari instance is already paired with a different session. 
 Host info: host: &apos;Sandeshs-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:54:113e:8f74:fbe4%en0&apos;
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.safari.SafariDriver
 Command: [null, newSession {capabilities=[Capabilities {browserName: safari}]}]
@@ -394,15 +368,15 @@ Capabilities {browserName: safari}
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:84)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:80)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:57)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:48)
 	at drivers.DriverFactory.createDriver(DriverFactory.java:23)
-	at tests.BaseTest.setup(BaseTest.java:20)
+	at tests.BaseTest.setup(BaseTest.java:21)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
@@ -418,9 +392,9 @@ Capabilities {browserName: safari}
                   </a> <!-- testLoginExcel({password=Admin@1234, username=Admin@gmail.com}) -->
                   <span class="method-name">testLoginExcel</span>
                   <span class="parameters">({password=Admin@1234, username=Admin@gmail.com})</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The automation session ended unexpected while attempting to pair with it. 
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The Safari instance is already paired with a different session. 
 Host info: host: &apos;Sandeshs-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:54:113e:8f74:fbe4%en0&apos;
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.safari.SafariDriver
 Command: [null, newSession {capabilities=[Capabilities {browserName: safari}]}]
@@ -431,15 +405,15 @@ Capabilities {browserName: safari}
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:84)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:80)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:57)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:48)
 	at drivers.DriverFactory.createDriver(DriverFactory.java:23)
-	at tests.BaseTest.setup(BaseTest.java:20)
+	at tests.BaseTest.setup(BaseTest.java:21)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
@@ -455,9 +429,9 @@ Capabilities {browserName: safari}
                   </a> <!-- testLoginExcel({password=Admin@123, username=Admin@gmail.com}) -->
                   <span class="method-name">testLoginExcel</span>
                   <span class="parameters">({password=Admin@123, username=Admin@gmail.com})</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The automation session ended unexpected while attempting to pair with it. 
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not create a session: The Safari instance is already paired with a different session. 
 Host info: host: &apos;Sandeshs-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:54:113e:8f74:fbe4%en0&apos;
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.5&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.safari.SafariDriver
 Command: [null, newSession {capabilities=[Capabilities {browserName: safari}]}]
@@ -468,15 +442,15 @@ Capabilities {browserName: safari}
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:173)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:84)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:80)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:57)
 	at org.openqa.selenium.safari.SafariDriver.&lt;init&gt;(SafariDriver.java:48)
 	at drivers.DriverFactory.createDriver(DriverFactory.java:23)
-	at tests.BaseTest.setup(BaseTest.java:20)
+	at tests.BaseTest.setup(BaseTest.java:21)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
@@ -591,56 +565,56 @@ data.addRows(12);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testLoginExcel')
 data.setCell(0, 2, 'tests.LoginTest')
-data.setCell(0, 3, 8190);
+data.setCell(0, 3, 7437);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'performLogin')
+data.setCell(1, 1, 'testLogin')
 data.setCell(1, 2, 'tests.LoginTest')
-data.setCell(1, 3, 6116);
+data.setCell(1, 3, 6784);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'performLogin')
+data.setCell(2, 1, 'testLogin')
 data.setCell(2, 2, 'tests.LoginTest')
-data.setCell(2, 3, 5865);
+data.setCell(2, 3, 6519);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testLogin')
+data.setCell(3, 1, 'performLogin')
 data.setCell(3, 2, 'tests.LoginTest')
-data.setCell(3, 3, 5819);
+data.setCell(3, 3, 5893);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'testLogin')
 data.setCell(4, 2, 'tests.LoginTest')
-data.setCell(4, 3, 5662);
+data.setCell(4, 3, 5469);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testLoginExcel')
+data.setCell(5, 1, 'testLogin')
 data.setCell(5, 2, 'tests.LoginTest')
-data.setCell(5, 3, 5581);
+data.setCell(5, 3, 5411);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'testLogin')
 data.setCell(6, 2, 'tests.LoginTest')
-data.setCell(6, 3, 5430);
+data.setCell(6, 3, 4261);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testLogin')
+data.setCell(7, 1, 'testLoginExcel')
 data.setCell(7, 2, 'tests.LoginTest')
-data.setCell(7, 3, 0);
+data.setCell(7, 3, 3952);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testLoginExcel')
+data.setCell(8, 1, 'performLogin')
 data.setCell(8, 2, 'tests.LoginTest')
-data.setCell(8, 3, 0);
+data.setCell(8, 3, 2962);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'testLogin')
 data.setCell(9, 2, 'tests.LoginTest')
-data.setCell(9, 3, 0);
+data.setCell(9, 3, 1);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'testLoginExcel')
 data.setCell(10, 2, 'tests.LoginTest')
 data.setCell(10, 3, 0);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testLogin')
+data.setCell(11, 1, 'testLoginExcel')
 data.setCell(11, 2, 'tests.LoginTest')
 data.setCell(11, 3, 0);
 window.suiteTableData['ExampleSuite']= { tableData: data, tableDiv: 'times-div-ExampleSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 42 seconds</span>
+              <span class="suite-total-time">Total running time: 48 seconds</span>
               <div id="times-div-ExampleSuite">
               </div> <!-- times-div-ExampleSuite -->
             </div> <!-- times-div -->
@@ -676,130 +650,146 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <span class="method-name">performLogin(Admin@gmail.com, Admin@123)</span>
+                <span class="method-start">8689 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">11657 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testLogin(admin, admin123)</span>
-                <span class="method-start">5213 ms</span>
+                <span class="method-start">12069 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">12196 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">performLogin(Admin@gmail.com, Admin@123)</span>
-                <span class="method-start">5619 ms</span>
+                <span class="method-name">testLoginExcel({password=Admin@123, username=Admin@gmail.com})</span>
+                <span class="method-start">19128 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10866 ms</span>
+                <span class="method-start">19877 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">10975 ms</span>
+                <span class="method-start">20091 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">11485 ms</span>
+                <span class="method-start">23084 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">12454 ms</span>
+                <span class="method-start">23212 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testLogin(user1, pass123)</span>
-                <span class="method-start">15013 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testLoginExcel({password=Admin@123, username=Admin@gmail.com})</span>
-                <span class="method-start">15477 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">20972 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">21130 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">23670 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">23767 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testLogin(Admin@gmail.com, Admin@123)</span>
-                <span class="method-start">25297 ms</span>
+                <span class="method-start">25005 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testLoginExcel({password=Admin@1234, username=Admin@gmail.com})</span>
-                <span class="method-start">26528 ms</span>
+                <span class="method-start">25629 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">31123 ms</span>
+                <span class="method-start">30734 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">30847 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">32267 ms</span>
+                <span class="method-start">33263 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testLogin(Admin@gmail.com, Admin@123)</span>
+                <span class="method-start">34565 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">38828 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(safari)</span>
-                <span class="method-start">32632 ms</span>
+                <span class="method-start">39178 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">setup(safari)</span>
-                <span class="method-start">32632 ms</span>
+                <span class="method-start">39178 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
+                <span class="method-name">testLogin(admin, admin123)</span>
+                <span class="method-start">46179 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">performLogin(Admin@gmail.com, Admin@123)</span>
-                <span class="method-start">36403 ms</span>
+                <span class="method-start">48791 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">42826 ms</span>
+                <span class="method-start">53227 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">53108 ms</span>
+                <span class="method-start">54973 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(safari)</span>
+                <span class="method-start">63483 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(safari)</span>
+                <span class="method-start">65053 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testLogin(user1, pass123)</span>
+                <span class="method-start">67252 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">72853 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">75572 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">53126 ms</span>
+                <span class="method-start">75574 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">53129 ms</span>
+                <span class="method-start">75576 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">53130 ms</span>
+                <span class="method-start">83099 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testLogin(Admin@gmail.com, Admin@123)</span>
+                <span class="method-start">83101 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">53135 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">53144 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">53148 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">53149 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">53150 ms</span>
+                <span class="method-start">83105 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
