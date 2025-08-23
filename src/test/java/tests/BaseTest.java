@@ -1,7 +1,10 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -12,7 +15,7 @@ import utils.ConfigReader;
 public class BaseTest {
 	
 	@Parameters({"browser"})
-	@BeforeTest
+	@BeforeMethod
 	public void setup(String browser)
 	{
 		WebDriver driverref = DriverFactory.createDriver(browser);
@@ -20,13 +23,15 @@ public class BaseTest {
 		DriverManager.getDriver().get(ConfigReader.get("base.url"));
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void tearDown()
 	{
+		
 		if(DriverManager.getDriver() != null)
 		{
 			DriverManager.getDriver().quit();
 			DriverManager.removeDriver();
 		}
+		
 	}
 }

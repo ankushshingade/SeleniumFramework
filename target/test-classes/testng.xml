@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="ExampleSuite">
-	<parameter name="browser" value="chrome"></parameter>
-	<test name="TestExampleOne">
-		<classes>  
+<suite name="ExampleSuite" parallel="methods" thread-count="2">
+
+	<parameter name="username" value="Admin@gmail.com"></parameter>
+	<parameter name="password" value="Admin@123"></parameter>
+
+
+	<listeners>
+		<listener class-name="listeners.TestListeners" />
+	</listeners>
+
+	<test name="TestExampleOneChrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
 			<class name="tests.LoginTest">
-			<parameter name="username" value="Admin@gmail.com"></parameter>
-			<parameter name="password" value="Admin@123"></parameter>
-			</class>  
+			</class>
+		</classes>
+	</test>
+
+	<test name = "TestExampleOnSafari">
+		<parameter name="browser" value="safari"></parameter>
+		<classes>
+			<class name="tests.LoginTest">
+			</class>
 		</classes>
 	</test>
 	
-	
+
 </suite>

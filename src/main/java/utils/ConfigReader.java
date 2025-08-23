@@ -8,7 +8,7 @@ import java.util.Properties;
 public class ConfigReader {
 	
 	public static Properties properties;
-	
+
 	static {
 		try {
 			FileInputStream fs = new FileInputStream("src/main/resources/config.properties");
@@ -18,10 +18,10 @@ public class ConfigReader {
 			e.printStackTrace();
 		}
 	}
-	
 	public static String get(String key)
 	{
 		return properties.getProperty(key);
 	}
-
+	
+	
 }
