@@ -1,11 +1,10 @@
 package tests;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import drivers.DriverFactory;
@@ -14,24 +13,49 @@ import utils.ConfigReader;
 
 public class BaseTest {
 	
-	@Parameters({"browser"})
-	@BeforeMethod
-	public void setup(String browser)
-	{
-		WebDriver driverref = DriverFactory.createDriver(browser);
-		DriverManager.setDriver(driverref);
-		DriverManager.getDriver().get(ConfigReader.get("base.url"));
-	}
 	
-	@AfterMethod
-	public void tearDown()
-	{
+	public static final Logger logger = LogManager.getLogger(BaseTest.class);
+	
+	/*
+	    * Sets up the WebDriver before running tests.
+	    * 
+	    * Creates a new browser instance using DriverFactory
+	    * - Stores the WebDriver in ThreadLocal via DriverManager
+	    * - Opens the application URL
+	    */
 		
-		if(DriverManager.getDriver() != null)
+		@Parameters({"os","browser"})
+		@BeforeMethod
+		public void setUp( String os,String browser)
 		{
-			DriverManager.getDriver().quit();
-			DriverManager.removeDriver();
+			
+			WebDriver driverRef = DriverFactory.createDriver(browser);
+			DriverManager.setDriver(driverRef);
+			
+			 // Navigate to application under test
+			DriverManager.getDriver().get(ConfigReader.get("base.url"));
 		}
 		
-	}
+		
+		/*
+		 
+	     * Cleans up the WebDriver after running tests.
+	     * 
+	     * - Quits the browser if driver is not null
+	     * - Removes WebDriver reference from ThreadLocal
+	     *   to avoid memory leaks in parallel execution
+	     */
+		
+		
+		@AfterMethod
+		public void tearDown()
+		{
+			if(DriverManager.getDriver() !=null)
+			{
+				DriverManager.getDriver().quit();
+				DriverManager.removeDriver(); //clear ThreadLocal
+			}
+		}
+	
+
 }

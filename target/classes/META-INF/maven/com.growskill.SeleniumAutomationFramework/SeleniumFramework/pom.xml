@@ -12,45 +12,63 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <selenium.version>4.35.0</selenium.version>
-    <testng.version>7.11.0</testng.version>
   </properties>
 
-  <dependencies>
-   	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+   <dependencies>
+      <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
-    		<groupId>org.seleniumhq.selenium</groupId>
-    		<artifactId>selenium-java</artifactId>
-    		<version>${selenium.version}</version>
-		</dependency>
-   		
-   		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-		<dependency>
-		    <groupId>org.testng</groupId>
-		    <artifactId>testng</artifactId>
-		    <version>${testng.version}</version>
-		    <scope>test</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>5.2.5</version>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-		<dependency>
-		    <groupId>com.aventstack</groupId>
-		    <artifactId>extentreports</artifactId>
-		    <version>5.1.2</version>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>4.35.0</version>
 		</dependency>
 		
 		
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.17.0</version>
-		</dependency>
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>7.9.0</version>
+	
+	</dependency>
+		
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-api</artifactId>
+	    <version>2.17.0</version>
+   </dependency>
+
+   <dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-core</artifactId>
+	    <version>2.17.0</version>
+   </dependency>
+	   	   
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>5.4.1</version>
+	</dependency>	
+	
+	<!-- Apache POI for .xlsx (OOXML) support -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-ooxml</artifactId>
+	    <version>5.4.1</version>
+	</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+	<dependency>
+	    <groupId>com.aventstack</groupId>
+	    <artifactId>extentreports</artifactId>
+	    <version>5.1.2</version>
+	</dependency>
+		
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+		<version>2.17.0</version>
+	</dependency>
+				
   </dependencies>
   
   <build>
@@ -61,7 +79,7 @@
 		        <version>3.5.3</version>
 		        <configuration>
 		          <suiteXmlFiles>
-		            <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+		            <suiteXmlFile>testng.xml</suiteXmlFile>
 		          </suiteXmlFiles>
 		        </configuration>
       		</plugin>

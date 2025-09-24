@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="methods" name="Failed suite [ExampleSuite]" guice-stage="DEVELOPMENT">
-  <parameter name="password" value="Admin@123"/>
-  <parameter name="username" value="Admin@gmail.com"/>
-  <listeners>
-    <listener class-name="listeners.TestListeners"/>
-  </listeners>
-  <test thread-count="2" parallel="methods" name="TestExampleOneChrome(failed)">
-    <parameter name="browser" value="chrome"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.LoginTest">
+      <class name="tests.TestOne">
         <methods>
-          <include name="testLoginExcel" invocation-numbers="1"/>
-          <include name="testLogin" invocation-numbers="0 1"/>
+          <include name="testMethod"/>
+          <include name="testMethod2"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- tests.LoginTest -->
-    </classes>
-  </test> <!-- TestExampleOneChrome(failed) -->
-  <test thread-count="2" parallel="methods" name="TestExampleOnSafari(failed)">
-    <parameter name="browser" value="safari"/>
-    <classes>
+      </class> <!-- tests.TestOne -->
+      <class name="tests.TestTwo">
+        <methods>
+          <include name="groupTestCase"/>
+          <include name="verifyDashboard"/>
+          <include name="smokeTestCase"/>
+          <include name="testInTestTwo"/>
+          <include name="tearDown"/>
+          <include name="LoginTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestTwo -->
       <class name="tests.LoginTest">
         <methods>
           <include name="testLoginExcel"/>
-          <include name="testLogin" invocation-numbers="0 1"/>
-          <include name="performLogin" invocation-numbers="0"/>
+          <include name="performLogin"/>
+          <include name="testLogin"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>
-  </test> <!-- TestExampleOnSafari(failed) -->
-</suite> <!-- Failed suite [ExampleSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

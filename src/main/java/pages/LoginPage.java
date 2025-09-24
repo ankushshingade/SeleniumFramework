@@ -2,57 +2,91 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
-public class LoginPage extends BasePage{
-
-	WebDriver driver;
+//Page Object Class for the Login Page
+public class LoginPage extends BasePage {
 	
-	@FindBy(xpath = "//input[@data-qa='login-email']")
-	private WebElement emailAddressLocator;
+	 // Locators
+	 By loginUserLoc = By.xpath("//h2[text()='Login to your account']");
+	 By emailAddressLoc = By.xpath("//input[@data-qa='login-email']");
+	 By passwordLoc = By.xpath("//input[@data-qa='login-password']");
+	 By loginBtnLoc = By.xpath("//button[@data-qa='login-button']");
+	 By usernameLoc = By.xpath("//input[@data-qa='signup-name']");
+	 By emailAddressNewLoc = By.xpath("//input[@data-qa='signup-email']");
+	 By signUpBtnLoc = By.xpath("//button[@data-qa='signup-button']");
+	 By newSignUpLoc = By.xpath("//h2[text()='New User Signup!']");
+	 By signupErrLoc = By.xpath("//form[@action='/signup']//p[text()='Email Address already exist!']");
+	 By loginErrLoc = By.xpath("//form[@action='/login']//p[text()='Your email or password is incorrect!']");
 	
-	@FindBy(xpath = "//input[@data-qa='login-password']")
-	private WebElement passwordLocator;
+	 // Constructor
+	 public LoginPage(WebDriver driver) 
+	 {
+	     super(driver); // Initialize BasePage
+	 }
 	
-	@FindBy(xpath = "//button[@data-qa='login-button']")
-	private WebElement loginButton;
+	 // Verify if Login section is visible
+	 public boolean isLogin() 
+	 {
+	     return isElementVisible(loginUserLoc);
+	 }
 	
-//	By emailAddressLocator = By.xpath("//input[@data-qa='login-email']");
-//	By passwordLocator = By.xpath("//input[@data-qa='login-password']");
-//	By loginButton = By.xpath("//button[@data-qa='login-button']");
+	 // Enter email for login
+	 public void enterMail(String username) 
+	 {
+	     type(emailAddressLoc, username);
+	 }
 	
-	public LoginPage(WebDriver driver)
-	{
-		super(driver);
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
+	 // Enter password for login
+	 public void enterPassword(String password) 
+	 {
+	     type(passwordLoc, password);
+	 }
 	
+	 // Click on Login button
+	 public void clickOnLoginBtn() 
+	 {
+	     click(loginBtnLoc);
+	 }
 	
-	public void enterUsername(String emailAddress)
-	{
-		type(emailAddressLocator, emailAddress);	
-	}
+	 // Get the page title
+	 public String getLoginTitle() 
+	 {
+	     return driver.getTitle();
+	 }
 	
-	public void enterPassword(String password)
-	{
-		type(passwordLocator, password);	
-	}
+	 // Verify if login error message is displayed
+	 public boolean isLoginErr() 
+	 {
+	     return isElementVisible(loginErrLoc);
+	 }
 	
-	public void clickLoginButton()
-	{
-		click(loginButton);
-	}
+	 // Verify if Signup section is visible
+	 public boolean isSignup() 
+	 {
+	     return isElementVisible(newSignUpLoc);
+	 }
 	
-	public String getLoginTitle()
-	{
-		return driver.getTitle();
-	}
+	 // Enter username for signup
+	 public void enterUsername(String username) 
+	 {
+	     type(usernameLoc, username);
+	 }
 	
+	 // Enter email for signup
+	 public void enterEmailAddress(String email) 
+	 {
+	     type(emailAddressNewLoc, email);
+	 }
 	
-	//All the locators of that page
-	//Executions on those locators
+	 // Click on Signup button
+	 public void clickOnSignUpBtn() 
+	 {
+	     click(signUpBtnLoc);
+	 }
 	
+	 // Verify if signup error message is displayed
+	 public boolean isSignupErr() 
+	 {
+	     return isElementVisible(signupErrLoc);
+	 }
 }
+

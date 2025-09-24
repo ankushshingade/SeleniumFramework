@@ -3,9 +3,30 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="tests.TestOne">
+        <methods>
+          <include name="testMethod"/>
+          <include name="testMethod2"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestOne -->
+      <class name="tests.TestTwo">
+        <methods>
+          <include name="groupTestCase"/>
+          <include name="verifyDashboard"/>
+          <include name="smokeTestCase"/>
+          <include name="testInTestTwo"/>
+          <include name="tearDown"/>
+          <include name="LoginTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestTwo -->
       <class name="tests.LoginTest">
         <methods>
           <include name="testLoginExcel"/>
+          <include name="performLogin"/>
+          <include name="testLogin"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

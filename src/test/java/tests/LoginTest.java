@@ -1,95 +1,81 @@
 package tests;
 
-import java.time.Duration;
-import java.util.List;
 import java.util.Map;
 
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import dataProviders.DataProviders;
 import drivers.DriverManager;
+import pages.AccountDeletedPage;
+import pages.HomePage;
 import pages.LoginPage;
-import utils.ExcelUtil;
+import pages.MyAccountPage;
 
-public class LoginTest extends BaseTest{
+public class LoginTest extends BaseTest 
+{
 	
-	@Parameters({"username", "password"})
-	@Test
-	public void performLogin(String username, String password)
+	
+	/**
+	 * LoginTest contains test cases related to user login functionality.
+	 *
+	 * Each test case:
+	  *
+	 *   1.Extends {@link base.BaseTest} to use setup/teardown
+	 *   2.Uses {@link driver.DriverManager} to get thread-safe WebDriver
+	 *   3.Interacts with {@link pages.LoginPage} (Page Object Model)
+	 * 
+	 */
+
+	@Test(dataProvider="loginData",dataProviderClass=DataProviders.class)
+	public void testLogin(Map<String,String>data)
 	{
-		System.out.println(username + " " + password);
-		WebDriver driverref = DriverManager.getDriver();
-		LoginPage loginpage = new LoginPage(driverref);
-		loginpage.enterUsername(username);
-		loginpage.enterPassword(password);
-		loginpage.clickLoginButton();
+		WebDriver driver = DriverManager.getDriver();
 		
-		WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(5));
-	    wait.until(ExpectedConditions.titleIs("Automation Exercise"));
-		String pageTitle = loginpage.getLoginTitle();
-		Assert.assertEquals(pageTitle, "Automation Exercise");
+		 logger.info("------- TESTCASE 2 : LOGIN USER WITH  CORRECT EMAIL AND  PASSWORD ----------");
+		
+		//Verify that the Home Page is displayed correctly.
+	    HomePage homePage = new HomePage(driver);
+		Assert.assertTrue(homePage.isHomePage(),  "Expected Home Page to be visible but it is not");
+		logger.info("Home Page is displayed successfully");
+		
+		// Navigate to Signup/Login
+	    homePage.clickSignUpORLogin();
+	    logger.info("Navigated to Signup/Login page");
+	    
+	    
+	    //Verify that the login is displayed correctly.
+	    LoginPage loginPage = new LoginPage(driver);
+	    Assert.assertTrue(loginPage.isLogin(), "Expected login section to be visible but it is not");
+	    logger.info("Login section is visible");
+	    
+	    
+	    //Perform login
+		loginPage.enterMail(data.get("username"));
+		loginPage.enterPassword(data.get("password"));
+		loginPage.clickOnLoginBtn();
+		logger.info("fill details and clicked on login button");
+		
+		
+		//Verify User Logged In
+		 MyAccountPage myAccPage = new MyAccountPage(driver);
+		 Assert.assertTrue(myAccPage.isLoggedInUser(), "Expected user should login, but it is not ");
+		 logger.info("User logged in successfully: {}", myAccPage.getLoggedInUserText());
+		 
+		 //Delete Account
+		 myAccPage.clickDeleteAcc();
+         logger.info("Clicked on Delete Account button");
+         
+         //Verify Account Deletion
+         AccountDeletedPage accDelPage = new AccountDeletedPage(driver);
+         logger.info("Account has been deleted successfully");
+         accDelPage.continueClick();
+         
+
 	}
 	
-	@DataProvider(name = "loginData")
-    public Object[][] getData() {
-        return new Object[][] {
-            {"admin", "admin123"},
-            {"user1", "pass123"},
-            {"Admin@gmail.com", "Admin@123"}
-      };
-    }
- 
-	@Test(dataProvider = "loginData")
-    public void testLogin(String username, String password) {
-        System.out.println("Username: " + username + ", Password: " + password );
-        
-        LoginPage loginpage = new LoginPage(DriverManager.getDriver());
-		loginpage.enterUsername(username);
-		loginpage.enterPassword(password);
-		loginpage.clickLoginButton();
-		WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(5));
-	    wait.until(ExpectedConditions.titleIs("Automation Exercise"));
-		String pageTitle = loginpage.getLoginTitle();
-		Assert.assertEquals(pageTitle, "Automation Exercise");
-    }
 	
-	 
-	 @DataProvider(name = "loginDataExcel")
-		public Object[][] loginData() {
-		 
-		    List<Map<String, String>> data = ExcelUtil.getData("src/test/resources/testdata/LoginData.xlsx", "Login");
-		    Object[][] result = new Object[data.size()][1];
-		    for (int i = 0; i < data.size(); i++) {
-		        result[i][0] = data.get(i);
-		    }
-		    return result;
-		}
-
-
-		@Test(dataProvider = "loginDataExcel")
-	    public void testLoginExcel(Map<String, String> testData) {
-	        LoginPage loginPage = new LoginPage(DriverManager.getDriver());
-	        
-	        String username = testData.get("username");
-	        String password = testData.get("password");
-	        
-	        System.out.println(username + " " + password);
-	        
-	        loginPage.enterUsername(username);
-	        loginPage.enterPassword(password);
-	        loginPage.clickLoginButton();
-
-	        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(5));
-		    wait.until(ExpectedConditions.titleIs("Automation Exercise"));
-	        String pageTitle = loginPage.getLoginTitle();
-	       
-		    Assert.assertEquals(pageTitle, "Automation Exercise");
-//	        Assert.fail("This test case is intentionally failed.");
-	    }
-	 
+    
 }
